@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Opunnence Flow IA | Automatiza ventas con inteligencia conversacional</title>
+  <meta name="description" content="Opunnence Flow IA es el motor de automatización conversacional que convierte visitantes en leads y ventas 24/7 con IA entrenada para tu negocio." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Opunnence Flow IA | Automatiza ventas con IA" />
+  <meta property="og:description" content="Convierte conversaciones en ventas con flujos inteligentes, leads cualificados y automatización real." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="opunnence-flow-ia-logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #1f6cff;
+      --primary-dark: #164fc4;
+      --bg-dark: #0f172a;
+      --text-dark: #0b1220;
+      --text-muted: #5b6475;
+      --bg-light: #f7f9fc;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: var(--radius);
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 96px 0;
+      background: linear-gradient(180deg, #f4f7ff 0%, #ffffff 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    .hero ul {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .hero li {
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .hero li i {
+      color: var(--primary);
+      margin-right: 10px;
+    }
+
+    .hero-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .hero-card h3 {
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+
+    .hero-card ul {
+      list-style: none;
+    }
+
+    .hero-card li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Features */
+    .features {
+      padding: 96px 0;
+      background: var(--bg-light);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: auto;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .feature {
+      background: #fff;
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+    }
+
+    .feature i {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .feature h3 {
+      margin-bottom: 12px;
+    }
+
+    .feature p {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 96px 0;
+      background: var(--bg-dark);
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      max-width: 640px;
+      margin: auto;
+      margin-bottom: 32px;
+      color: #cbd5e1;
+    }
+
+    footer {
+      padding: 48px 0;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="logo" href="/">
+      <img src="opunnence-flow-ia-logo.png" alt="Opunnence Flow IA">
+    </a>
+    <a href="#cta" class="btn btn-primary">Ver demo</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Opunnence Flow IA</span>
+        <h1>Convierte conversaciones en ventas, automáticamente</h1>
+        <p>
+          Flow IA es el motor de automatización conversacional de Opunnence.
+          Atiende, cualifica y convierte leads 24/7 con flujos inteligentes entrenados para tu negocio.
+        </p>
+
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Captura y cualifica leads en tiempo real</li>
+          <li><i class="fas fa-check-circle"></i> Flujos híbridos: reglas + IA</li>
+          <li><i class="fas fa-check-circle"></i> Integrado con tu web y WhatsApp</li>
+        </ul>
+
+        <a href="#cta" class="btn btn-primary">Solicitar acceso</a>
+      </div>
+
+      <div class="hero-card">
+        <h3>Qué hace Flow IA</h3>
+        <ul>
+          <li>• Responde como tu mejor comercial</li>
+          <li>• Agenda citas automáticamente</li>
+          <li>• Puntúa leads por interés y presupuesto</li>
+          <li>• Escala sin contratar más personal</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Automatización real, no solo un chatbot</h2>
+        <p>Flow IA está diseñado para generar negocio, no para “hablar bonito”.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature">
+          <i class="fas fa-diagram-project"></i>
+          <h3>Flujos inteligentes</h3>
+          <p>Control total del recorrido del usuario con lógica de negocio clara y personalizable.</p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-brain"></i>
+          <h3>IA entrenada</h3>
+          <p>Entiende intención, presupuesto y urgencia. No improvisa, ejecuta.</p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-chart-line"></i>
+          <h3>Resultados medibles</h3>
+          <p>Leads, citas, conversión y ahorro operativo visibles desde el panel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="cta">
+    <div class="container">
+      <h2>Empieza a vender con Flow IA</h2>
+      <p>
+        Activa Opunnence Flow IA en tu negocio y convierte cada conversación en una oportunidad real.
+      </p>
+      <a href="mailto:contacto@opunnence.com" class="btn btn-primary">
+        Solicitar demo privada
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 Opunnence · Flow IA es parte del ecosistema Opunnence
+</footer>
+
+</body>
+</html>
